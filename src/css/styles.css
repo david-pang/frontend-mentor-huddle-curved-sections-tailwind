@@ -1,5 +1,54 @@
 @import "tailwindcss";
 
 @theme {
+    --color-brand-facebook: #4267b2;
+    --color-brand-instagram: #c13584;
+    --color-brand-twitter: #1da1f2;
+    --color-dark-green: #00252e;
+    --color-hot-pink: #ff52c1;
+    --color-hot-pink-light: #ff8ed7;
+    --color-light-grey: #808e9a;
+    --color-off-white: #f6fbff;
+    --font-open-sans: "Open Sans";
+    --font-poppins: "Poppins";
     --text-base-dynamic: max(1vw, 16px);
+    --text-xxs: 0.625rem;
+
+    --button-bg-color: var(--color-hot-pink);
+    --button-border: 1px solid;
+    --button-color: var(--color-white);
+    --button-drop-shadow: 0 3px 7px --alpha(var(--color-dark-green) / 22%);
+    --button-bg-color-reverse: var(--color-white);
+    --button-color-reverse: var(--color-hot-pink);
+    --button-border-reverse: 1px solid;
+    --button-hover-bg-color: var(--color-hot-pink-light);
+    --button-hover-color-reverse: var(--color-hot-pink-light);
+}
+
+@layer components {
+    .button {
+        background-color: var(--button-bg-color);
+        border: var(--button-bg-border);
+        color: var(--button-color);
+
+        @variant hover {
+            background-color: var(--button-hover-bg-color);
+            border: var(--button-hover-bg-border);
+            cursor: pointer;
+        }
+    }
+}
+
+@utility button-* {
+    background-color: --value(--button-bg-color- *);
+    border: --value(--button-border- *);
+    color: --value(--button-color- *);
+    font-size: var(--button-font-size- *);
+
+    @variant hover {
+        background-color: --value(--button-hover-bg-color- *);
+        border: --value(--button-hover-bg-border- *);
+        color: --value(--button-hover-color- *);
+        cursor: pointer;
+    }
 }
