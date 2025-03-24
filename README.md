@@ -40,7 +40,7 @@ This is a solution to the [Huddle landing page with curved sections challenge on
 
 ### What I learned
 
-This challenge allowed me to apply my Tailwind CSS skills to a simple project.
+This challenge allowed me to apply my Tailwind CSS and RWD skills to a simple project.
 
 ### Useful resources
 
